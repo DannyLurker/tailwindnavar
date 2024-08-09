@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <link rel="stylesheet" href="css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>NavTail</title>
+  </head>
+  <body
+    class="font-poppins bg-gradient-to-t from-[#E3CAA5] to-[#CEAB93] h-screen"
+  >
+    <header class="bg-[#AD8B73] p-2">
+      <nav class="flex justify-between items-center w-[92%] mx-auto">
+        <div class="p-4">
+          <h1 class="font-bold text-2xl">NavTail</h1>
+        </div>
+        <div
+          class="nav-links duration-500 lg:static absolute bg-[#AD8B73] lg:min-h-fit min-h-[99vh] left-0 top-[-100%] lg:w-auto w-2/3 flex lg:items-center px-5 lg:mt-0 py-5 mx-auto"
+        >
+          <ul
+            class="flex lg:flex-row flex-col lg:items-center lg:gap-[4vw] gap-8"
+          >
+            <li>
+              <h1 class="font-bold text-2xl mb-6 lg:hidden">NavTail</h1>
+              <a class="underline-link" href="#"> Products </a>
+            </li>
+            <li>
+              <a class="underline-link" href="#">Solution</a>
+            </li>
+            <li>
+              <a class="underline-link" href="#">Resource</a>
+            </li>
+            <li>
+              <a class="underline-link" href="#">Developers</a>
+            </li>
+            <li>
+              <a class="underline-link" href="#">Pricing</a>
+              <button
+                class="bg-gradient-to-r from-[#CEAB93] to-[#E3CAA5] rounded-full cursor-pointer px-2 py-1 mt-4 block mr-1 lg:hidden"
+              >
+                Sign In
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-end">
+          <div class="flex items-center">
+            <button
+              class="bg-gradient-to-r from-[#CEAB93] to-[#E3CAA5] rounded-full cursor-pointer hidden px-2 py-1 mr-4 lg:block"
+            >
+              Sign In
+            </button>
+            <div id="hamburger" class="hamburger mr-1 cursor-pointer lg:hidden">
+              <span
+                class="span_1 block w-8 h-2 bg-[#FFFBE9] mb-1 transition-transform duration-300 ease-in-out rounded"
+              ></span>
+              <span
+                class="span_2 block w-8 h-2 bg-[#FFFBE9] mb-1 transition-opacity duration-300 ease-in-out rounded"
+              ></span>
+              <span
+                class="span_3 block w-8 h-2 bg-[#FFFBE9] rounded mb-1 transition-transform duration-300 ease-in-out"
+              ></span>
+            </div>
+            <div class="flex items-center">
+              <label for="user-modal" class="cursor-pointer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="{1.5}"
+                  stroke="currentColor"
+                  class="w-12"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                </svg>
+              </label>
+              <input
+                type="checkbox"
+                id="user-modal"
+                class="peer fixed appearance-none opacity-0"
+              />
+              <label
+                for="user-modal"
+                class="pointer-events-none invisible fixed flex cursor-pointer items-end justify-center overflow-hidden overscroll-contain opacity-0 transition-all duration-300 ease-in-out peer-checked:pointer-events-auto peer-checked:visible peer-checked:opacity-100 peer-checked:[&>*]:translate-y-0 peer-checked:[&>*]:scale-100 right-0 top-[82px] mr-2"
+              >
+                <label
+                  for=""
+                  class="h-fit w-64 scale-90 overflow-y-auto overscroll-contain rounded-lg bg-[#AD8B73] p-6 text-black shadow-2xl transition"
+                >
+                  <h3 class="text-lg font-bold">osas</h3>
+                  <p class="py-4">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </label>
+              </label>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
+  <script>
+    const navLinks = document.querySelector(".nav-links");
+
+    document.getElementById("hamburger").addEventListener("click", function () {
+      this.classList.toggle("active");
+      navLinks.classList.toggle("top-[1%]");
+    });
+  </script>
+</html>
